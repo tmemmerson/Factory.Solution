@@ -8,16 +8,16 @@
 
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.StatusName)
-  @Html.TextBoxFor(model => model.StatusName) <br>
+  <div class="form-group">
+    @Html.LabelFor(model => model.StatusName)
+    @Html.TextBoxFor(model => model.StatusName) <br>
+    @Html.LabelFor(model => model.StatusDate)
+    @Html.TextBoxFor(model => model.StatusDate)<br>
+    @Html.LabelFor(model => model.Machine)
+    @Html.DropDownList("MachineId") <br>
+  </div>
 
-  @Html.LabelFor(model => model.StatusDate)
-  @Html.TextBoxFor(model => model.StatusDate)<br>
-
-  @Html.LabelFor(model => model.Machine)
-  @Html.DropDownList("MachineId") <br>
-
-  <input type="submit" value="Add new status" /> <br>
+  <input type="submit" value="Add new status" class="btn btn-outline-dark"/> <br>
 }
 
 <p>@Html.ActionLink("Status Index", "Index")</p>
