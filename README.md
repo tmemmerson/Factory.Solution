@@ -1,7 +1,8 @@
 **<h1 align = "center">Sneuss Factory**
 
 <h1 align="center">
-  <img width="900" height="450" src="https://coding-assets.s3-us-west-2.amazonaws.com/readme_hero_images/Factory.Solution.jpg">
+  <img width="900" height="450" src="">
+
 </h1>
 
 **<h1 align="center">"Think left and think right and think low and think high. Oh, the thinks you can think up if you only try! - Dr. Seuss"**
