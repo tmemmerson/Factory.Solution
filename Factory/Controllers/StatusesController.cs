@@ -41,7 +41,7 @@ namespace Factory.Controllers
       var machineId = thisStatus.MachineId;
       Machine thisMachine = _db.Machines.FirstOrDefault(machines => machines.MachineId == machineId);
       ViewBag.Machine = thisMachine.MachineType;
-      return View(thisPiece);
+      return View(thisStatus);
     }
   }
 }
