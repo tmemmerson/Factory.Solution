@@ -4,16 +4,16 @@
 
 @model Factory.Models.Machine
 
-<h2>Edit @Html.DisplayFor(model => model.MachineType)</h2>
+<h2>Edit @Html.DisplayFor(model => model.MachineName)</h2>
 
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.MachineId)
 
-  @Html.LabelFor(model => model.MachineType)
-  @Html.TextBoxFor(model => model.MachineType)
+  @Html.LabelFor(model => model.MachineName)
+  @Html.TextBoxFor(model => model.MachineName)
 
-  @Html.Label("Add Engineer:") 
+  @Html.Label("Add engineer:") 
   @Html.DropDownList("EngineerId")
 
   @Html.Label("Add Status:")
@@ -22,5 +22,5 @@
   <input type="submit" value="Update" />
 }
 
-<p>@Html.ActionLink("Machines Index", "Index")</p>
+<p>@Html.ActionLink("Machine Index", "Index")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
