@@ -4,9 +4,9 @@
 
 @model Factory.Models.Machine
 
-<h2>Are you sure you want to delete @Html.DisplayFor(model => model.MachineType)?</h2>
+<h2>Are you sure you want to delete the @Html.DisplayFor(model => model.MachineName) machine?</h2>
 
-@Html.DisplayNameFor(model => model.MachineType): @Html.DisplayFor(model => model.MachineType)
+@Html.DisplayNameFor(model => model.MachineName): @Html.DisplayFor(model => model.MachineName)
 @using (Html.BeginForm())
 {
   <input type="submit" value="Delete" />
