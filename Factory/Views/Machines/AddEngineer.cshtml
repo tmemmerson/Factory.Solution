@@ -11,11 +11,11 @@
 @using (Html.BeginForm())
 {
     @Html.HiddenFor(model => model.MachineId)
-
+  <div class="form-group">
     @Html.Label("Select engineer")
     @Html.DropDownList("EngineerId")
-
-    <input type="submit" value="Save" />
+  </div>
+    <input type="submit" value="Save" class="btn btn-outline-dark"/>
 }
 
 <p>@Html.ActionLink("Back to machines", "Index")</p>
