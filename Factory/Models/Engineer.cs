@@ -14,9 +14,8 @@ namespace Factory.Models
       public int EngineerId { get; set; }
       public string EngineerName { get; set; }
       public string EngineerDescription { get; set; }
-      
       [DataType(DataType.Date)]
-      public Date EngineerHireDate { get; set; }
+      public DateTime EngineerHireDate { get; set; }
       
       public virtual ICollection<MachineEngineer> Machines { get; set; }
     }
