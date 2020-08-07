@@ -13,8 +13,7 @@
   <a href="#📫questions-and-concerns">Q's & C's</a> •
   <a href="#🔧technologies-used">Technologies</a> •
   <a href="#🐛bugs">Bugs</a> •  
-  <a href="#❤️contributors">Contributors</a> •
-  <a href="#📘license">License</a>**
+  <a href="#❤️contributors">Contributors</a> •**
 
 <br>
 <h2 align = "center">
