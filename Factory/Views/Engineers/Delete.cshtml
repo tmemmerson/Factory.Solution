@@ -5,7 +5,7 @@
 
 @model Factory.Models.Engineer
 
-<h2>Confirm deletion of @Html.DisplayFor(model => model.EngineerName) ?</h2>
+<h2>Are you sure you want to delete engineer @Html.DisplayFor(model => model.EngineerName) ?</h2>
 
 @Html.DisplayNameFor(model => model.EngineerName): @Html.DisplayFor(model => model.EngineerName)
 @using (Html.BeginForm())
@@ -13,5 +13,5 @@
   <input type="submit" value="Delete" />
 }
 
-@Html.ActionLink("See engineers", "Index")
+@Html.ActionLink("See all engineers", "Index")
 @Html.ActionLink("Home", "Index", "Home")
