@@ -38,9 +38,9 @@ namespace Factory.Controllers
     public ActionResult Details(int id)
     {
       var thisEngineer = _db.Engineers
-          .Include(engineer => movement.Machines)
-          .ThenInclude(join => join.Artist)
-          .FirstOrDefault(engineer => movement.EngineerId == id);
+          .Include(engineer => engineer.Machines)
+          .ThenInclude(join => join.Machine)
+          .FirstOrDefault(engineer => engineer.EngineerId == id);
       return View(thisEngineer);
     }
 
@@ -58,21 +58,21 @@ namespace Factory.Controllers
       {
         _db.MachineEngineer.Add(new MachineEngineer() {MachineId = MachineId, EngineerId = engineer.EngineerId});
       }
-      _db.Entry(movement).State = EntityState.Modified;
+      _db.Entry(engineer).State = EntityState.Modified;
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
 
     public ActionResult Delete(int id)
     {
-      var thisEngineer = _db.Engineers.FirstOrDefault(engineer => movement.EngineerId == id);
+      var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
       return View(thisEngineer);
     }
 
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
-      var thisEngineer = _db.Engineers.FirstOrDefault(engineer => movement.EngineerId == id);
+      var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
       _db.Engineers.Remove(thisEngineer);
       _db.SaveChanges();
       return RedirectToAction("Index");
