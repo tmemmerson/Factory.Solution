@@ -11,15 +11,15 @@
 
 @if(@Model.Machines.Count() == 0)
 {
-  <p>not presently licensed for any machinery</p>
+  <p>There are no machines listed yet</p>
 }
 else
 {
-  <h4>Machinery Licenses:</h4>
+  <h4>Machines:</h4>
   <ul>
     @foreach(var join in Model.Machines)
     {
-    <li>@Html.ActionLink($"{join.Machine.MachineType}", "Details", "Machines", new { id = @join.Machine.MachineId })</li> 
+    <li>@Html.ActionLink($"{join.Machine.MachineName}", "Details", "Machines", new { id = @join.Machine.MachineId })</li> 
     }
   </ul>
 }
