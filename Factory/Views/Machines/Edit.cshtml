@@ -9,17 +9,16 @@
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.MachineId)
+  <div class="form-group">
+    @Html.LabelFor(model => model.MachineName)
+    @Html.TextBoxFor(model => model.MachineName)
+    @Html.Label("Add engineer:") 
+    @Html.DropDownList("EngineerId")
+    @Html.Label("Add Status:")
+    @Html.DropDownList("StatusId")
+  </div>
 
-  @Html.LabelFor(model => model.MachineName)
-  @Html.TextBoxFor(model => model.MachineName)
-
-  @Html.Label("Add engineer:") 
-  @Html.DropDownList("EngineerId")
-
-  @Html.Label("Add Status:")
-  @Html.DropDownList("StatusId")
-
-  <input type="submit" value="Update" />
+  <input type="submit" value="Update" class="btn btn-outline-dark"/>
 }
 
 <p>@Html.ActionLink("Machine Index", "Index")</p>
