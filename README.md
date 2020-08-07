@@ -1,20 +1,24 @@
 **<h1 align = "center">Sneuss Factory**
 
+*<h2 align ="center">Out with the French and in with the Grinch*
+
 <h1 align="center">
   <img width="900" height="450" src="https://coding-assets.s3-us-west-2.amazonaws.com/hero_images/Factory.Solution.jpg">
 
 </h1>
 
-**<h1 align="center">"Think left and think right and think low and think high. Oh, the thinks you can think up if you only try! - Dr. Seuss"**
+**<h2 align="center">"Think left and think right and think low and think high. Oh, the thinks you can think up if you only try! - Dr. Seuss"**
 
-**<h4 align = "center">
+<br>
+
+**<h3 align = "center">
   <a href="#✅requirements">Requirements</a> •
   <a href="#💻setup">Setup</a> •
   <a href="#🔧protecting-your-data">Protecting Data<a> •
   <a href="#📫questions-and-concerns">Q's & C's</a> •
   <a href="#🔧technologies-used">Technologies</a> •
-  <a href="#🐛bugs">Bugs</a> •  
-  <a href="#❤️contributors">Contributors</a> •**
+  <a href="#🐛bugs">Bugs</a> •
+  <a href="#❤️contributors">Contributors</a>**
 
 <br>
 <h2 align = "center">
@@ -69,6 +73,19 @@ ni .gitignore
 
 #### Step 3: **To commit your .gitignore file enter the following commands**
 
+```js
+git add .gitignore
+```
+```js
+git commit -m "protect data"
+```
+
+#### Step 4: **Then, you need to update your username and password in the appsettings.json file.**
+
+_by default these are set to user:root and an empty password. if you are unsure, refer to the settings for your MySqlWorkbench._
+
+![appsettings](https://coding-assets.s3-us-west-2.amazonaws.com/img/app-settings.png)
+
 ## **💻SETUP**
 
 copy this url to clone this project to your local system:
@@ -105,21 +122,6 @@ Your application is now built, as well as the requisite database for this applic
 ```js 
 dotnet run 
 ``` 
-
-
-
-```js
-git add .gitignore
-```
-```js
-git commit -m "protect data"
-```
-
-#### Step 4: **Then, you need to update your username and password in the appsettings.json file.**
-
-_by default these are set to user:root and an empty password. if you are unsure, refer to the settings for your MySqlWorkbench._
-
-![appsettings](https://coding-assets.s3-us-west-2.amazonaws.com/img/app-settings.png)
 
 <br>
 
