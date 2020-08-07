@@ -1,0 +1,11 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Factory.Models;
+@model Factory.Models.Status
+<h1> Status details</h1>
+<hr/>
+@Html.DisplayNameFor(model => model.StatusCondition): @Html.DisplayFor(model => model.StatusCondition)<br>
+  |  @Html.DisplayNameFor(model => model.StatusUpdateDate): @Html.DisplayFor(model => model.StatusUpdateDate)<br>
+  |  @Html.DisplayNameFor(model => model.Machine.MachineType): @ViewBag.Machine
