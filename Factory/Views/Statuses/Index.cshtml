@@ -1,0 +1,20 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Factory.Models;
+@model List<Factory.Models.Status>;
+
+<h1>Status Conditions</h1>
+
+@if (Model.Count() == 0)
+{
+  <h3>no machine status conditions</h3>
+}
+
+@foreach (Status status in Model)
+{
+  <li>@Html.ActionLink($"{status.StatusCondition}", "Details", new { id = status.StatusId })</li>
+}
+
+<p>@Html.ActionLink("New status condition", "Create")</p>
