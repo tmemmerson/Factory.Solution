@@ -8,9 +8,11 @@
 
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.EngineerName)
-  @Html.TextBoxFor(model => model.EngineerName)
-  <input type="submit" value="add" />
+  <div class="form-group">
+    @Html.LabelFor(model => model.EngineerName)
+    @Html.TextBoxFor(model => model.EngineerName)
+    <input type="submit" value="add" class="btn btn-outline-dark"/>
+  </div>
 }
 
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
