@@ -12,7 +12,7 @@ namespace Factory.Models
             this.Statuses = new HashSet<Status>();
         }
         public int MachineId { get; set; }
-        public string MachineName { get; set; }
+        public string MachineType { get; set; }
 
         [DataType(DataType.Date)]
         public Date DateLastRepaired { get; set; }
