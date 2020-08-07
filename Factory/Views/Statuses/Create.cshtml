@@ -4,15 +4,15 @@
 
 @model Factory.Models.Status;
 
-<h1>Add Piece</h1>
+<h1>Add Status</h1>
 
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.StatusCondition)
-  @Html.TextBoxFor(model => model.StatusCondition) <br>
+  @Html.LabelFor(model => model.StatusName)
+  @Html.TextBoxFor(model => model.StatusName) <br>
 
-  @Html.LabelFor(model => model.StatusUpdateDate)
-  @Html.TextBoxFor(model => model.StatusUpdateDate)<br>
+  @Html.LabelFor(model => model.StatusDate)
+  @Html.TextBoxFor(model => model.StatusDate)<br>
 
   @Html.LabelFor(model => model.Machine)
   @Html.DropDownList("MachineId") <br>
