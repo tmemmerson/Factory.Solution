@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Factory.Controllers
 {
-  public class FactoryController : Controller
+  public class MachinesController : Controller
   {
     private readonly FactoryContext _db;
 
@@ -25,8 +25,8 @@ namespace Factory.Controllers
     public ActionResult Create()
     {
       ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "EngineerName");
-      ViewBag.Status = new Select(_db.Statuses, "StatusId", "StatusCondition");
-      return Viewe();
+      ViewBag.Status = new SelectList(_db.Statuses, "StatusId", "StatusCondition");
+      return View();
     }
 
     [HttpPost]
@@ -40,7 +40,7 @@ namespace Factory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-    
+
     public ActionResult Edit(int id)
     {
       var thisMachine = _db.Machines.FirstOrDefault(machines => machines.MachineId == id);
@@ -57,24 +57,6 @@ namespace Factory.Controllers
         _db.MachineEngineer.Add(new MachineEngineer() { EngineerId = EngineerId, MachineId = machine.MachineId});
       }
       _db.Entry(machine).State = EntityState.Modified;
-      _db.SaveChanges();
-      return RedirectToAction("Index");
-    }
-
-    public ActionResult AddEngineer(int id)
-    {
-      var thisMachine = _db.Machines.FirstOrDefault(machines => machines.MachineId == id);
-      ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "EngineerName");
-      return View(thisMachine);
-    }
-
-    [HttpPost]
-    public ActionResult AddEngineer(Machine machine1, int EngineerId)
-    {
-      if (EngineerId != 0)
-      {
-        _db.MachineEngineer.Add(new MachineEngineer() { EngineerId = EngineerId, MachineId = machine.MachineId});
-      }
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
@@ -102,5 +84,24 @@ namespace Factory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
+    public ActionResult AddEngineer(int id)
+    {
+      var thisMachine = _db.Machines.FirstOrDefault(machines => machines.MachineId == id);
+      ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "EngineerName");
+      return View(thisMachine);
+    }
+
+    [HttpPost]
+    public ActionResult AddEngineer(Machine machine, int EngineerId)
+    {
+      if (EngineerId != 0)
+      {
+        _db.MachineEngineer.Add(new MachineEngineer() { EngineerId = EngineerId, MachineId = machine.MachineId });
+      }
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
   }
 }
