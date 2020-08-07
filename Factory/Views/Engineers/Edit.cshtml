@@ -10,14 +10,14 @@
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.EngineerId)
+  <div class="form-group">
+    @Html.LabelFor(model => model.EngineerName)
+    @Html.TextBoxFor(model => model.EngineerName)
 
-  @Html.LabelFor(model => model.EngineerName)
-  @Html.TextBoxFor(model => model.EngineerName)
-
-  @Html.Label("Add Machine:")
-  @Html.DropDownList("MachineId")
-
-  <input type="submit" value="update" />
+    @Html.Label("Add Machine:")
+    @Html.DropDownList("MachineId")
+  </div>
+  <input type="submit" value="update" class="btn btn-outline-dark"/>
 }
 
 <p>@Html.ActionLink("Engineer Index", "Index")</p>
