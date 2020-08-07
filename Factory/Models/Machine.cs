@@ -12,10 +12,11 @@ namespace Factory.Models
             this.Statuses = new HashSet<Status>();
         }
         public int MachineId { get; set; }
-        public string MachineType { get; set; }
-        
+        public string MachineName { get; set; }
         [DataType(DataType.Date)]
-        public DateTime DateLastRepaired { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime DateOfDeath { get; set; }
         public ICollection<Status> Statuses { get; set; }
         public ICollection<MachineEngineer> Engineers { get; set;} 
     }
