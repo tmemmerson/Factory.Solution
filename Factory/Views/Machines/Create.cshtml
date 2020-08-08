@@ -11,9 +11,9 @@
   <div class="form-group">
     @Html.LabelFor(model => model.MachineName)
     @Html.TextBoxFor(model => model.MachineName)
+  <input type="submit" value="add" class="btn btn-warning"/>
   </div>
-  <input type="submit" value="add" class="btn btn-outline-dark"/>
 }
 
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
-<p>@Html.ActionLink("All machines", "Index")</p>
+<p>@Html.ActionLink("See all machines", "Index")</p>
