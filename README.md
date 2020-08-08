@@ -3,7 +3,7 @@
 *<h2 align ="center">Out with the French and in with the Grinch*
 
 <h1 align="center">
-  <img width="900" height="450" src="https://coding-assets.s3-us-west-2.amazonaws.com/hero_images/Factory.Solution.jpg">
+  <img width="900" height="450" src="https://coding-assets.s3-us-west-2.amazonaws.com/backgrounds/factory.solution.background5.jpg">
 
 </h1>
 
