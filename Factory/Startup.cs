@@ -30,7 +30,7 @@ namespace Factory
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
         
       services.AddIdentity<ApplicationUser, IdentityRole>()
-        .AddEntityFrameworkStores<ToDoListContext>()
+        .AddEntityFrameworkStores<FactoryContext>()
         .AddDefaultTokenProviders();
     }
 
