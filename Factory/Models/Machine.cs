@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace Factory.Models
 {
@@ -12,11 +12,8 @@ namespace Factory.Models
             this.Statuses = new HashSet<Status>();
         }
         public int MachineId { get; set; }
+        [DisplayName("Machine Type")]
         public string MachineName { get; set; }
-        [DataType(DataType.Date)]
-        public DateTime DateOfBirth { get; set; }
-        [DataType(DataType.Date)]
-        public DateTime DateOfDeath { get; set; }
         public ICollection<Status> Statuses { get; set; }
         public ICollection<MachineEngineer> Engineers { get; set;} 
     }
