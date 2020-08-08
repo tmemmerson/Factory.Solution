@@ -1,5 +1,5 @@
 body {
-  background-image: url(https://coding-assets.s3-us-west-2.amazonaws.com/backgrounds/factory.solution.background.jpg);
+  background-image: url(https://coding-assets.s3-us-west-2.amazonaws.com/backgrounds/factory.solution.background5.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   font-family: 'Montserrat', sans-serif;
@@ -11,20 +11,20 @@ div#footer {
   bottom:0px;
   left:0px;
   width:100%;
-  background:rgba(17, 112, 201, 0.55);
+  background:rgba(167, 58, 147, 0.95);
   padding:8px;
   text-align: center;
 }
 
 .nav {
-  background-color: rgba(17, 112, 201, 0.75);
+  background-color:rgba(250, 240, 0, 0.85);
 }
 
 .container {
   margin-top: 3%;
   margin-bottom: 3%;
   padding: 2%;
-  background-color: rgba(224, 224, 224, 0.92);
+  background-color: rgba(233, 233, 233, 0.95);
   border-radius: 10px;
 }
 
