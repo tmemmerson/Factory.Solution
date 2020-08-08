@@ -13,7 +13,7 @@ namespace Factory.Models
     public int StatusId { get; set; }
     [DisplayName("Status Name")]
     public string StatusName { get; set; }
-    [DisplayName("Date status was Created")]
+    [DisplayName("Date created")]
     [DataType(DataType.Date)]
     public DateTime StatusDate { get; set; }
     public byte[] StatusImage { get; set; }
