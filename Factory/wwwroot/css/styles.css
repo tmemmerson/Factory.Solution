@@ -11,13 +11,15 @@ div#footer {
   bottom:0px;
   left:0px;
   width:100%;
-  background:rgba(167, 58, 147, 0.95);
+  background:rgba(167, 58, 147, 0.96);
   padding:8px;
   text-align: center;
+  font-family: 'Patrick Hand', cursive;
 }
 
 .nav {
   background-color:rgba(250, 240, 0, 0.85);
+  font-family: 'Patrick Hand', cursive;
 }
 
 .container {
