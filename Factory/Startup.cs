@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Factory.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace Factory
 {
@@ -27,6 +28,10 @@ namespace Factory
       services.AddEntityFrameworkMySql()
         .AddDbContext<FactoryContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
+        
+      services.AddIdentity<ApplicationUser, IdentityRole>()
+        .AddEntityFrameworkStores<ToDoListContext>()
+        .AddDefaultTokenProviders();
     }
 
     public void Configure(IApplicationBuilder app)
@@ -34,6 +39,7 @@ namespace Factory
       app.UseStaticFiles();
 
       app.UseDeveloperExceptionPage();
+      app.UseAuthentication();
 
       app.UseMvc(routes =>
       {
