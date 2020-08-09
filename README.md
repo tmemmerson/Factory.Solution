@@ -90,7 +90,7 @@ _by default these are set to user:root and an empty password. if you are unsure,
 
 copy this url to clone this project to your local system:
 ```html
-https://github.com/tmemmerson/DoctorOffice.Solution.git
+https://github.com/tmemmerson/Factory.Solution.git
 ```
 
 <br>
