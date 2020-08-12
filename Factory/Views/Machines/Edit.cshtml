@@ -12,10 +12,6 @@
   <div class="form-group">
     @Html.LabelFor(model => model.MachineName)
     @Html.TextBoxFor(model => model.MachineName)
-    @Html.Label("Add engineer:") 
-    @Html.DropDownList("EngineerId")
-    @Html.Label("Add Status:")
-    @Html.DropDownList("StatusId")
   </div>
 
   <input type="submit" value="Update" class="btn btn-outline-dark"/>
@@ -23,3 +19,4 @@
 
 <p>@Html.ActionLink("Machine Index", "Index")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
+<p>@Html.ActionLink("Add engineer", "AddEngineer", "Machines")</p>

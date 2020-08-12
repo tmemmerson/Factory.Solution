@@ -22,6 +22,6 @@ namespace Factory.Models
       
       [DataType(DataType.Date)]
       public DateTime EngineerEnd { get; set; }
-      public virtual ICollection<MachineEngineer> Machines { get; set; }
+      public ICollection<MachineEngineer> Machines { get; set; }
     }
 }

@@ -24,20 +24,13 @@ namespace Factory.Controllers
 
     public ActionResult Create()
     {
-      ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "EngineerName");
-      ViewBag.Status = new SelectList(_db.Statuses, "StatusId", "StatusName");
       return View();
     }
 
     [HttpPost]
-
-    public ActionResult Create(Machine machine, int EngineerId)
+    public ActionResult Create(Machine machine)
     {
       _db.Machines.Add(machine);
-      if(EngineerId != 0)
-      {
-        _db.MachineEngineer.Add(new MachineEngineer() {EngineerId = EngineerId, MachineId = machine.MachineId});
-      }
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
@@ -56,18 +49,15 @@ namespace Factory.Controllers
     public ActionResult Edit(int id)
     {
       var thisMachine = _db.Machines.FirstOrDefault(machines => machines.MachineId == id);
-      ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "EngineerName");
-      ViewBag.StatusId = new SelectList(_db.Statuses, "StatusId", "StatusName");
+/*       ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "EngineerName");
+      ViewBag.StatusId = new SelectList(_db.Statuses, "StatusId", "StatusName"); */
       return View(thisMachine);
     }
   
     [HttpPost]
     public ActionResult Edit(Machine machine, int EngineerId)
     {
-      if (EngineerId != 0)
-      {
-        _db.MachineEngineer.Add(new MachineEngineer() { EngineerId = EngineerId, MachineId = machine.MachineId });
-      }
+
       _db.Entry(machine).State = EntityState.Modified;
       _db.SaveChanges();
       return RedirectToAction("Index");
@@ -106,11 +96,11 @@ namespace Factory.Controllers
     }
 
     [HttpPost]
-    public ActionResult AddEngineer(Machine machine, int EngineerId)
+    public ActionResult AddEngineer(Engineer engineer, int MachineId)
     {
-      if (EngineerId != 0)
+      if (MachineId != 0)
       {
-        _db.MachineEngineer.Add(new MachineEngineer() { EngineerId = EngineerId, MachineId = machine.MachineId});
+        _db.MachineEngineer.Add(new MachineEngineer() { MachineId = MachineId, EngineerId = engineer.EngineerId});
       }
       _db.SaveChanges();
       return RedirectToAction("Index");
