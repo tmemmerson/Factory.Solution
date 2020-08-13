@@ -19,4 +19,4 @@
 
 <p>@Html.ActionLink("Machine Index", "Index")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
-<p>@Html.ActionLink("Add engineer", "AddEngineer", "Machines")</p>
+<p>@Html.ActionLink("Add engineer", "AddEngineer",  new { id = Model.MachineId })</p>
