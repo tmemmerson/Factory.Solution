@@ -28,10 +28,6 @@ namespace Factory
       services.AddEntityFrameworkMySql()
         .AddDbContext<FactoryContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
-        
-      services.AddIdentity<ApplicationUser, IdentityRole>()
-        .AddEntityFrameworkStores<FactoryContext>()
-        .AddDefaultTokenProviders();
     }
 
     public void Configure(IApplicationBuilder app)

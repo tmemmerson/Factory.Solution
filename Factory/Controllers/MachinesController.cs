@@ -38,7 +38,6 @@ namespace Factory.Controllers
     public ActionResult Details(int id)
     {
       var thisMachine = _db.Machines
-        .Include(machine => machine.Statuses)
         .Include(machine => machine.Engineers)
         .ThenInclude(join => join.Engineer)
         .FirstOrDefault(machine => machine.MachineId == id);
@@ -49,8 +48,6 @@ namespace Factory.Controllers
     public ActionResult Edit(int id)
     {
       var thisMachine = _db.Machines.FirstOrDefault(machines => machines.MachineId == id);
-/*       ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "EngineerName");
-      ViewBag.StatusId = new SelectList(_db.Statuses, "StatusId", "StatusName"); */
       return View(thisMachine);
     }
   

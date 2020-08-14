@@ -9,20 +9,6 @@
 <hr />
 <h2>@Html.DisplayFor(model => model.MachineName)</h2>
 
-@if(@Model.Statuses.Count() == 0)
-{
-  <p>no status updates on this machine</p>
-}
-else
-{
-  <h4>Statuses:</h4>
-  <ul>
-    @foreach(Status status in Model.Statuses)
-    {
-      <li>@status.StatusName</li>
-    }
-  </ul>
-}
 
 @if(@Model.Engineers.Count() == 0)
 {
@@ -35,10 +21,10 @@ else
   @foreach(var join in Model.Engineers)
   {
     <li>@join.Engineer.EngineerName</li>
-    @using (Html.BeginForm("DeleteEngineer", "Engineers"))
+    @using (Html.BeginForm("DeleteEngineer", "Machines"))
     {
     @Html.Hidden("joinId", @join.MachineEngineerId)
-    <input class="btn btn-danger" type="submit" value="Delete"/>
+    <input type="submit" value="Delete"/>
     }
   }
   </ul>
